@@ -14,3 +14,22 @@
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(fonts.googleapis.com/css?family=Raleway);
+
+.jumbotron {
+    text-align: center;
+    background-color: white;
+    height: 350px;
+
+    h1 {
+        padding-top: 20px;
+        font-family: 'Raleway', 'Helvetica Neue', Helvetica;
+        color: #330000;
+        font-weight: 400;
+    }
+    
+    p {
+        font-family: 'Raleway', 'Helvetica Neue', Helvetica;
+        color: #000;
+    }
+}
