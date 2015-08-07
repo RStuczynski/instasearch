@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # added from tutorial
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'instagram'
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
