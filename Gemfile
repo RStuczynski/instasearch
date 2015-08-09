@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'instagram'
 gem 'figaro', '1.0'
+gem 'will_paginate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

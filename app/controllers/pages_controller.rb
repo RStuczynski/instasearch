@@ -12,8 +12,19 @@ class PagesController < ApplicationController
       @tag  = default_search
     end
 
+    #pulls in the relevant tag # (first, second, last) along with the name
     @tag = @tag.first.name
     @search = client.tag_recent_media(@tag)
+    next_max_id = @search.pagination.next_max_id
+    
+    i = 0
+    while i < 4
+      @next_result = client.tag_recent_media(@tag, :max_id => next_max_id )
+      @search += @next_result
+      next_max_id = @next_result.pagination.next_max_id
+      i += 1
+    end
+
   end
   
   def about
