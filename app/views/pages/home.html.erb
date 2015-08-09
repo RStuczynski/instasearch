@@ -18,7 +18,7 @@
       <% @search.each do |instagram| %>
          <div class="col-sm-8 col-md-4">
             <div class="profile-panel">
-               <div class="thumbnail"><%= image_tag instagram.images.low_resolution.url %>
+               <div class="thumbnail"><%= link_to image_tag(instagram.images.standard_resolution.url), instagram.link, :target=>"_blank" %>
                </div>
                <div class="profile-container">
                   <div class="profile-image">
@@ -26,7 +26,7 @@
                   </div>
                </div>   
             </div>
-            <h4 class="caption"><%= truncate(instagram.caption.text, length: 200) %></h4>
+            <h4 class="caption"><b>@<%= instagram.user.username %></b>: <%= truncate(instagram.caption.text, length: 200) %></h4>
          </div>
       <% end %>
    </div>
