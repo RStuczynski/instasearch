@@ -13,4 +13,9 @@
 <%= yield %>
 
 </body>
+<script type="text/javascript"> $('button').on("click", function(){
+	var searchThis= $(this).attr('data');
+	$('#search').val(searchThis);
+})
+</script>
 </html>

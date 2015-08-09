@@ -16,3 +16,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('a.filter').click(function(){
+		var $this 		= $(this),
+			filterFor 	= $this.data('filter');
+		$('div[data-tags]').hide();
+		$('div[data-tags~="' + filterFor.toLowerCase() + '"]').show();
+	});
+});

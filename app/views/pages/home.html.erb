@@ -1,6 +1,7 @@
 <div class="jumbotron center">
-   <h1><i class="fa fa-instagram fa-1x"></i> Stew's Clues</h1>  
-   <br>
+   <h1><i class="fa fa-instagram fa-1x"></i> #SkimmChallenge</h1>
+   <p>May the Best Skimm'r Win</p>
+<!--    <br>
    <form class="col-lg-12">
       <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
          <input id="search" type="text" name="q" class="center-block form-control input-lg"
@@ -10,12 +11,23 @@
       </div>
    </form>
    <br>
+</div>-->
+
+   <h4 style="bottom-margin: 10px;"> Click on the #hashtags below to view the daily entries!</h4>
+
+   <div id="mainButtons">
+     <% @tags.each do |tag| %>
+     <%#= link_to("##{tag}", root_path(q: tag), class: 'btn btn-primary') %>
+     <%= link_to("##{tag}", 'javascript:void(0)', class: 'filter btn btn-primary', 'data-filter' => tag) %>
+     <% end %>
+   </div>
+
 </div>
 
 <div class="container">
    <div class="row">
       <% @search.each do |instagram| %>
-         <div class="col-sm-8 col-md-4">
+         <div class="col-sm-8 col-md-4" data-tags="<%= instagram.tags.join(' ') %>">
             <div class="profile-panel">
                <div class="thumbnail"><%= link_to image_tag(instagram.images.standard_resolution.url), instagram.link, :target=>"_blank" %>
                </div>

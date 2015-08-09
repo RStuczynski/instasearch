@@ -16,21 +16,28 @@
 @import "bootstrap";
 @import url(fonts.googleapis.com/css?family=Raleway);
 
+.row {
+	margin-top:15px;
+	overflow: auto;
+}
+
 .jumbotron {
     text-align: center;
-    background-color: white;
-    height: 350px;
+	background-color: white;
+	height: 325px;
+	color: #009f9b;
+	padding-top: 25px;
 
     h1 {
         padding-top: 20px;
         font-family: 'Raleway', 'Helvetica Neue', Helvetica;
-        color: #330000;
+        color: #009f9b;
         font-weight: 400;
     }
     
     p {
         font-family: 'Raleway', 'Helvetica Neue', Helvetica;
-        color: #000;
+        color: #009f9b;
     }
 }
 
@@ -64,13 +71,81 @@
     height: auto;
 }
 
-.caption
-
-{
+.caption {
     text-align: center;
     font-size: 13px;
     min-height: 70px;
     left: 10px;
     top: 0px;
     font-family: 'Raleway', 'Helvetica Neue', Helvetica; 
+}
+
+.btn btn-lg btn-primary {
+	background-color: #009f9b;
+}
+
+#mainButtons {
+	width: 100%;
+	font-family: Raleway;
+	margin-top: 30px;
+	position: relative;
+	overflow: auto;
+}
+
+button {
+	border-radius: 5px;
+	background-color: #009f9b;
+	color: #FFFFFF;
+	height: 50px;
+	width: 130px;
+}
+
+.btn-primary {
+	background-color: #009f9b;
+	padding: 15px;
+	border-color: #526F35;
+	a:hover { 
+        background-color: #526F35;
+    }
+}
+
+h4 {
+	font-family: Raleway;
+	color: #000000;
+	margin-top: 8px;
+}
+
+
+@media (max-width: 375px) {
+  
+h1 {
+	padding-top: 20px;
+	font-family: 'Raleway';
+	color: #009f9b;
+	font-size: 30px;
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: white;
+	height: 300px;
+	color: #009f9b;
+	padding-top: 5px;
+}
+
+.btn-primary {
+	background-color: #009f9b;
+	padding: 5px;
+	bottom: 5px;
+	border-color: #526F35;
+	    a:hover { 
+        background-color: #526F35;
+    }
+	
+}
+
+.h1 {
+	font-size: 30px;
+}
+
 }
