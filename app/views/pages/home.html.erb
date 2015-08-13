@@ -20,13 +20,15 @@
      <%#= link_to("##{tag}", root_path(q: tag), class: 'btn btn-primary') %>
      <%= link_to("##{tag}", 'javascript:void(0)', class: 'filter btn btn-primary', 'data-filter' => tag) %>
      <% end %>
+     or
+     <%= link_to("#skimmlife", root_path(q: 'skimmlife'), class: 'btn btn-primary') %>
    </div>
 
 </div>
 
 <div class="container">
    <div class="row">
-      <% @search.each do |instagram| %>
+      <% @search.each_with_index do |instagram, i| %>
          <div class="col-sm-8 col-md-4" data-tags="<%= instagram.tags.join(' ') %>">
             <div class="profile-panel">
                <div class="thumbnail"><%= link_to image_tag(instagram.images.standard_resolution.url), instagram.link, :target=>"_blank" %>
@@ -37,7 +39,7 @@
                   </div>
                </div>   
             </div>
-            <h4 class="caption"><b>@<%= instagram.user.username %></b>: <%= truncate(instagram.caption.text, length: 200) %></h4>
+            <h4 class="caption"><b>@<%= instagram.user.username %></b>: <%= truncate(instagram.caption.text, length: 200) %> <%= i %></h4>
          </div>
       <% end %>
    </div> 

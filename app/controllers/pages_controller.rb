@@ -2,19 +2,16 @@ class PagesController < ApplicationController
   def home
     
     # %w() creates an array of strings, split by white space
-    @tags = %w( Skimmlife
-                theskimm
-                Refresh
-                GrabbingABite
-                AtTheGym
-                WithAPet
-                Neighbor
-                Register
-                FreeSkimm)
+    @tags = %w( OfficeLife
+                caffeinated
+                workit
+                happyhour
+                animalstyle
+               )
 
     access_token = ENV["CONFIG_ACCESS_TOKEN"]
     client = Instagram.client(access_token: access_token)
-    default_search = client.tag_search('skimmlife')
+    default_search = client.tag_search('theskimm')
 
     if params[:q].present?
       search_query = client.tag_search(params[:q])
@@ -28,12 +25,10 @@ class PagesController < ApplicationController
     @search = client.tag_recent_media(@tag)
     next_max_id = @search.pagination.next_max_id
     
-    i = 0
-    while i < 4
+    4.times do
       @next_result = client.tag_recent_media(@tag, :max_id => next_max_id )
       @search += @next_result
       next_max_id = @next_result.pagination.next_max_id
-      i += 1
     end
 
   end
