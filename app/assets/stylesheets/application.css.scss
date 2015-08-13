@@ -41,6 +41,14 @@
     }
 }
 
+
+h4 {
+	font-family: Raleway;
+	color: #000000;
+	margin-top: 8px;
+}
+
+
 .profile-panel {
     position: relative
 }
@@ -59,7 +67,7 @@
     position: absolute;
     border: 2px solid #009f9c;
     left: 10px;
-    bottom: 10px;
+    bottom: 15px;
     width: 75px;
     height: 75px;
 }
@@ -76,7 +84,8 @@
     font-size: 13px;
     min-height: 70px;
     left: 10px;
-    top: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     font-family: 'Raleway', 'Helvetica Neue', Helvetica; 
 }
 
@@ -93,7 +102,7 @@
 }
 
 button {
-	border-radius: 5px;
+	border-radius: 2px;
 	background-color: #009f9b;
 	color: #FFFFFF;
 	height: 50px;
@@ -103,17 +112,33 @@ button {
 .btn-primary {
 	background-color: #009f9b;
 	padding: 15px;
-	border-color: #526F35;
-	a:hover { 
-        background-color: #526F35;
-    }
+	border-color: #009f9b;
 }
 
-h4 {
-	font-family: Raleway;
-	color: #000000;
-	margin-top: 8px;
+/* .btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus { 
+        background-color: #FFF;
+        color: #009f9b;
+		border-color: #009f9b;
+}*/
+
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #FFF !important;
+  color: #009f9b !important;
+  border-color: #009f9b !important;
 }
+
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:focus {
+  background-color: #FFF;
+  color: #009f9b;
+  border-color: #009f9b;
+}
+
 
 
 @media (max-width: 375px) {
@@ -136,16 +161,24 @@ h1 {
 .btn-primary {
 	background-color: #009f9b;
 	padding: 5px;
-	margin-bottom: 10px;
-	border-color: #526F35;
-	    a:hover { 
-        background-color: #526F35;
-    }
-	
+	margin-bottom: 20px;
+	border-color: #009f9b;
 }
 
-.h1 {
-	font-size: 30px;
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #FFF !important;
+  color: #009f9b !important;
+  border-color: #009f9b !important;
+}
+
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:focus {
+  background-color: #FFF;
+  color: #009f9b;
+  border-color: #009f9b;
 }
 
 }

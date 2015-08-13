@@ -23,5 +23,8 @@ $(document).ready(function(){
 			filterFor 	= $this.data('filter');
 		$('div[data-tags]').hide();
 		$('div[data-tags~="' + filterFor.toLowerCase() + '"]').show();
+		
+		$('a.filter').removeClass('active');
+		$this.addClass('active');
 	});
 });

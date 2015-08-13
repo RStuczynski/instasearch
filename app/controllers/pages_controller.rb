@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     
     # %w() creates an array of strings, split by white space
-    @tags = %w( OfficeLife
+    @tags = %w( officelife
                 caffeinated
                 workit
                 happyhour
@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
     access_token = ENV["CONFIG_ACCESS_TOKEN"]
     client = Instagram.client(access_token: access_token)
-    default_search = client.tag_search('theskimm')
+    default_search = client.tag_search('SkimmChallenge')
 
     if params[:q].present?
       search_query = client.tag_search(params[:q])
